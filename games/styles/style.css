@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+body {
+  background-color: #4169e1;
+  }
+#roleName{
+  height: 34.5px;
+}
+#pokerTable {
+  display: flex;
+  background-color: green;
+  border: 5px double gold;
+  border-radius: 20px;
+  justify-content: center;
+  margin: 10px 5px;
+  height: 160px
+}
+#pokerTable img{
+  width: 100px;
+  height: 150px;
+}
+.card input[type="checkbox"] {
+  display: none;
+}
+
+/* 枠線とアニメーション */
+.card img.selected {
+  border: 3px solid orange;
+  border-radius: 8px;
+  animation: floatUpDown 0.6s ease-in-out infinite alternate;
+}
+
+/* 上下に往復するアニメーション */
+@keyframes floatUpDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+.cardImage img{
+  width: 100px;
+  height: 150px;
+}
+.cardImage{
+  text-align: center;
+}
+#btnArea{
+  display: flex;
+  justify-content: space-evenly;
+}
+#change,#reset {
+  display: block;
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+#change {
+  background-color: #f39c12;
+  color: white;
+}
+
+#change:hover {
+  background-color: #d68910;
+}
+
+#reset {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#reset:hover {
+  background-color: #c0392b;
+}
+
+header,footer {
+  width: 1240px;
+  margin: 0 auto;
+  text-align: center;
+}
+.layoutWrap {
+  width: 1240px;
+  margin: 0 auto 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+main {
+  flex-basis: 940px;
+  background-color: #ffffff;
+  padding: 10px 0;
+}
+aside {
+  flex-basis: 284px;
+}
+.ffDotGothic16 {
+  font-family: 'DotGothic16', sans-serif;
+}
+h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.layoutWrap table,th,td {
+  border: 1px solid #000;
+  text-align: center;
+  padding: 5px;
+}
+.layoutWrap table {
+  margin: 30px auto 20px;
+}
+
+@media screen and (max-width: 640px) {
+  .layoutWrap{
+    display: block;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  aside ul{
+    display: flex;
+    li {
+      margin-right: 15px;
+    }
+  }
+  .layoutWrap,header,footer {
+    width: 100%;
+  }
+  #pokerTable {
+    flex-wrap: wrap;
+  }
+  #pokerTable img{
+    width: 20%;
+    height: 20%;
+    object-fit: cover;
+  }
+}

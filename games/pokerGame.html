@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rounded+Mplus+1c&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/pokerGame.css">
+  <title>ポーカーゲーム</title>
+</head>
+
+<body>
+  <div class="layoutWrap">
+    <header>
+      <h1 class="popFont">ポーカー</h1>
+    </header>
+    <main>
+      <div id="settingSheet">
+        <div>
+          <ul id="scoreSheet">
+            <li class="scoreName">ロイヤルストレートフラッシュ<span class="scorePoint" data-score="100"></span></li>
+            <li class="scoreName">ストレートフラッシュ<span class="scorePoint" data-score="50"></span></li>
+            <li class="scoreName">フォーカード<span class="scorePoint" data-score="10"></span></li>
+            <li class="scoreName">フルハウス<span class="scorePoint" data-score="5"></span></li>
+            <li class="scoreName">フラッシュ<span class="scorePoint" data-score="4"></span></li>
+            <li class="scoreName">ストレート<span class="scorePoint" data-score="3"></span></li>
+            <li class="scoreName">スリーカード<span class="scorePoint" data-score="2"></span></li>
+            <li class="scoreName">ツーペア<span class="scorePoint" data-score="2"></span></li>
+            <li class="scoreName">ワンペア<span class="scorePoint" data-score="1"></span></li>
+          </ul>
+        </div>
+        <div>
+          <ul id="pointSheet">
+            <li>所持pt <span id="havingPoints">100</span></li>
+            <li>ベットするpt
+              <span id="betPoints">
+                <select name="betPoint" id="betPointSelect">
+                </select>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h2 id="roleName" class="pop"></h2>
+      <div id="gameTable">
+        <label class="cardLabel">
+          <input type="checkbox" class="cardCheck" data-index="0">
+          <img class="cardImage">
+          <p class="changeStay">のこす</p>
+        </label>
+        <label class="cardLabel">
+          <input type="checkbox" class="cardCheck" data-index="1">
+          <img class="cardImage">
+          <p class="changeStay">のこす</p>
+        </label>
+        <label class="cardLabel">
+          <input type="checkbox" class="cardCheck" data-index="2">
+          <img class="cardImage">
+          <p class="changeStay">のこす</p>
+        </label>
+        <label class="cardLabel">
+          <input type="checkbox" class="cardCheck" data-index="3">
+          <img class="cardImage">
+          <p class="changeStay">のこす</p>
+        </label>
+        <label class="cardLabel">
+          <input type="checkbox" class="cardCheck" data-index="4">
+          <img class="cardImage">
+          <p class="changeStay">のこす</p>
+        </label>
+      </div>
+      <div id="btnArea">
+        <button id="change">交換する</button>
+        <button id="reset" class="none">もういちどチャレンジ!</button>
+      </div>
+    </main>
+    <nav class="pageNav">
+      <h2 class="navTitle">他のゲームへ</h2>
+      <ul>
+        <li><a href="highLow.html">High&Low</a></li>
+        <li><a href="memoryGame.html">神経衰弱</a></li>
+        <li><a href="../../index.html">ポートフォリオトップへ</a></li>
+      </ul>
+    </nav>
+
+    <footer>
+      <p>&copy; 2025 Yuya Mitsugi</p>
+    </footer>
+  </div>
+  <script src="javascript/common.js"></script>
+  <script src="javascript/pokerGame.js"></script>
+</body>
+
+</html>

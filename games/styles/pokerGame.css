@@ -1,0 +1,321 @@
+@charset "utf-8";
+
+body {
+  background-color: #87cefa;
+}
+
+main {
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 10px 0;
+}
+
+#settingSheet {
+  display: flex;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+#scoreSheet {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 2列 */
+  gap: 0.5rem 0.5rem;
+  /* 行間0.5、列間0.5 */
+  background-color: #fffaf2;
+  /* ミルクティーベージュ */
+  border: 2px solid #e5d9c5;
+  border-radius: 16px;
+  padding: 0.5rem 0.5rem;
+  margin: 0 auto;
+  width: fit-content;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  font-family: 'Rounded Mplus 1c', 'Hiragino Maru Gothic ProN', sans-serif;
+}
+
+#pointSheet {
+  background-color: #fffaf2;
+  border: 2px solid #e5d9c5;
+  border-radius: 16px;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  font-family: 'Rounded Mplus 1c', 'Hiragino Maru Gothic ProN', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  width: fit-content;
+}
+
+#pointSheet li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fefcf8;
+  border: 1px solid #e5d9c5;
+  border-radius: 12px;
+  padding: 0.4rem 0.6rem;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  color: #5a4a42;
+  min-width: 180px;
+  /* 幅そろえ */
+}
+
+
+
+.scoreName {
+  display: flex;
+  justify-content: space-between;
+  /* 左右に分ける */
+  background-color: #fefcf8;
+  border: 1px solid #e5d9c5;
+  border-radius: 12px;
+  padding: 0.2rem 0.2rem;
+  color: #5a4a42;
+}
+
+.scorePoint::after {
+  content: "pt";
+  font-size: 0.9rem;
+  color: #8b7e6b;
+}
+
+
+
+#roleName {
+  font-family: 'Rounded Mplus 1c', 'Hiragino Maru Gothic ProN', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #8b5cf6;
+  background-color: #f0e9ff;
+  border: 2px solid #d6bbfb;
+  border-radius: 20px;
+  text-align: center;
+  margin: 1rem auto;
+  min-width: 150px;
+  box-shadow: 0 4px 10px rgba(139, 92, 246, 0.3);
+  min-height: 1.6em;
+  /* 高さ確保（例：1行分） */
+  line-height: 1.4;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+#roleName.pop {
+  animation: softPop 0.4s ease-out;
+}
+
+@keyframes softPop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+#gameTable {
+  display: flex;
+  gap: 40px;
+  height: 250px;
+  background-color: green;
+  border: 5px double gold;
+  border-radius: 20px;
+  justify-content: center;
+  margin: 10px 5px;
+  padding: 20px 0 0 0;
+}
+
+.cardLabel {
+  user-select: none;
+}
+
+.cardLabel input[type="checkbox"] {
+  display: none;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.cardLabel img.slide-in {
+  animation: slideInFromLeft 0.4s ease-out forwards;
+  animation-fill-mode: forwards;
+}
+
+/* 枠線とアニメーション */
+.cardLabel img.selected {
+  border: 3px solid #ffb347;
+  /* 柔らかいオレンジ */
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(255, 179, 71, 0.5);
+  /* ほんのり光る影 */
+  filter: brightness(1.05);
+  /* 少し明るく */
+  transition: box-shadow 0.3s ease, filter 0.3s ease;
+  /* ホバーや切り替え時に滑らか */
+}
+
+@keyframes softGlow {
+  from {
+    box-shadow: 0 0 6px rgba(255, 179, 71, 0.3);
+  }
+
+  to {
+    box-shadow: 0 0 14px rgba(255, 179, 71, 0.7);
+  }
+}
+
+.cardImage img {
+  width: 100px;
+  height: 150px;
+}
+
+.cardImage {
+  width: 100px;
+  height: 150px;
+}
+
+.changeStay {
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 6px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background-color: #fff8dc;
+  color: #333;
+  box-shadow: 1px 1px 3px #aaa;
+}
+
+/* 「かえる」状態 */
+.cardLabel input[type="checkbox"]:checked~.changeStay {
+  background-color: #ff69b4;
+  /* ピンク */
+  color: white;
+  box-shadow: 2px 2px 5px #d63384;
+}
+
+/* 「のこす」状態 */
+.cardLabel input[type="checkbox"]:not(:checked)~.changeStay {
+  background-color: #87cefa;
+  /* 空色 */
+  color: white;
+  box-shadow: 2px 2px 5px #4682b4;
+}
+
+#btnArea {
+  display: flex;
+  justify-content: space-evenly;
+  user-select: none;
+}
+
+#change,
+#reset {
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+#change {
+  background-color: #f39c12;
+  color: white;
+}
+
+#change:hover {
+  background-color: #d68910;
+}
+
+#reset {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#reset:hover {
+  background-color: #c0392b;
+}
+
+
+
+.popFont {
+  font-family: 'Rounded Mplus 1c', 'Hiragino Maru Gothic ProN', sans-serif;
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  #gameTable {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 10px;
+    height: auto;
+  }
+
+  .cardLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28%;
+    min-width: 90px;
+  }
+
+  .cardImage {
+    height: auto;
+    max-height: 130px;
+  }
+
+  .changeStay {
+    font-size: 0.9rem;
+    padding: 2px 6px;
+    margin-top: 4px;
+  }
+
+  #btnArea {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  #settingSheet {
+    display: block;
+    width: 100%;
+  }
+
+  #pointSheet {
+    width: 90%;
+    margin: 1rem auto 0;
+  }
+
+  #scoreSheet {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  
+}

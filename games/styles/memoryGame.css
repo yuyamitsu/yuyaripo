@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+body {
+  background-color: #87cefa;
+  }
+
+#gameTable {
+  display: grid;
+  gap: 20px;
+  background-color: green;
+  border: 5px double gold;
+  border-radius: 20px;
+  justify-content: center;
+  margin: 10px 5px;
+  padding: 10px 0 10px 0;
+  /* カード配置の行数と列数 */
+  grid-template-columns: repeat(13, auto); /* 最大列数の9に合わせておく */
+}
+
+.cardLabel {
+  user-select: none;
+}
+.cardLabel input[type="checkbox"] {
+  display: none;
+}
+.slide-in {
+  animation: slideInFromLeft 0.4s ease-out forwards;
+  animation-fill-mode: forwards;
+}
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.cardImage{
+  width: 50px;
+  height: 75px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .cardLabel:hover {
+    animation: upDown 1s ease infinite;
+  }
+}
+@keyframes upDown {
+  0%   {translate: 0 0;}
+  50%   {translate: 0 -10px;}
+  100%   {translate: 0 0;}
+}
+
+#btnArea{
+  display: flex;
+  justify-content: space-evenly;
+  user-select: none;
+}
+#change,#reset {
+  display: block;
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+#change {
+  background-color: #f39c12;
+  color: white;
+}
+
+#change:hover {
+  background-color: #d68910;
+}
+
+#reset {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#reset:hover {
+  background-color: #c0392b;
+}
+
+main {
+  background-color: #ffffff;
+  padding: 10px 0;
+  width: 100%;
+  margin: 0 auto;
+}
+.popFont {
+  font-family: 'Rounded Mplus 1c', 'Hiragino Maru Gothic ProN', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+
+  #gameTable {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* スマホは4列*/
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .cardImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .cardLabel {
+    width: 100%;
+    aspect-ratio: 2 / 3; /* 縦長カードの比率を維持 */
+    display: block;
+  }
+}

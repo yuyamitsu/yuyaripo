@@ -1,0 +1,368 @@
+@charset "utf-8";
+
+body {
+  background-color: #87cefa;
+}
+
+#chipStatus {
+  background: linear-gradient(to bottom, #ffffff, #e0f0ff);
+  padding: 16px 24px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  font-family: 'Rounded Mplus 1c', sans-serif;
+  font-size: 1.1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border: 3px solid #2980b9;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#chipStatus p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 12px;
+  background-color: #ecf5fc;
+  border-radius: 8px;
+  border: 2px solid #2980b9;
+  color: #1b4f72;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+#chipStatus p span {
+  font-size: 1.2rem;
+  color: #1b4f72;
+}
+
+#betControl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: #ecf5fc;
+  border: 2px solid #2980b9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(41, 128, 185, 0.2);
+  font-family: 'Rounded Mplus 1c', sans-serif;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+#betControl label {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #1b4f72;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.betIcon {
+  font-size: 1.2rem;
+  color: #3498db;
+}
+
+.betIcon.animate {
+  animation: floatArrow 1.6s ease-in-out infinite;
+}
+
+@keyframes floatArrow {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+#betSelect {
+  font-size: 1.2rem;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 2px solid #3498db;
+  background-color: #ffffff;
+  color: #1b4f72;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#betSelect:hover {
+  background-color: #d6efff;
+  border-color: #2980b9;
+}
+
+
+
+
+#gameTable {
+  display: flex;
+  gap: 20px;
+  background-color: green;
+  border: 5px double gold;
+  border-radius: 20px;
+  justify-content: center;
+  margin: 10px 5px;
+  padding: 10px 0 10px 0;
+
+}
+
+#originDeck img {
+  width: 100px;
+  height: 150px;
+}
+
+#highLowDisplay {
+  position: relative;
+  height: 180px;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.cardImage {
+  width: 100px;
+  height: 150px;
+  display: inline-block;
+  margin-left: -70px;
+  /* カード幅の半分くらいで調整 */
+  transition: transform 0.2s ease;
+  animation: slideInFromLeft 0.4s ease-out forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.none {
+  display: none;
+}
+
+#btnArea {
+  display: flex;
+  justify-content: space-evenly;
+  user-select: none;
+}
+
+#startBtn,
+#highBtn,
+#lowBtn,
+#dropBtn,
+#reset {
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+#startBtn {
+  background-color: #27ae60;
+  color: white;
+}
+
+#startBtn:hover {
+  background-color: #1e8449;
+}
+
+#highBtn {
+  background-color: #f39c12;
+  color: white;
+}
+
+#highBtn:hover {
+  background-color: #d68910;
+}
+
+#lowBtn {
+  background-color: #3498db;
+  color: white;
+}
+
+#lowBtn:hover {
+  background-color: #2c80b4;
+}
+
+#dropBtn {
+  background-color: #7f8c8d;
+  color: white;
+}
+
+#dropBtn:hover {
+  background-color: #707b7c;
+}
+
+#reset {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#reset:hover {
+  background-color: #c0392b;
+}
+
+
+#resultMessage {
+  min-height: 2em;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: 2px solid #6c5ce7;
+  /* 少し落ち着いた紫系 */
+  border-radius: 10px;
+  background-color: #f0eaff;
+  /* 控えめなラベンダー系背景 */
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #5a4db2;
+  /* 落ち着きのある文字色 */
+  box-shadow: 0 0 6px rgba(108, 92, 231, 0.3);
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.tie {
+  color: #f39c12;
+  border-color: #f39c12;
+}
+
+/* 正解時のスタイル */
+.correct {
+  background-color: #d4edda;
+  color: #155724;
+  border-color: #c3e6cb;
+}
+
+/* 不正解時のスタイル */
+.wrong {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+main {
+  background-color: #ffffff;
+  padding: 10px 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.popFont {
+  font-family: 'Rounded Mplus 1c', 'Hiragino Maru Gothic ProN', sans-serif;
+}
+
+/* ラジオボタン群の装飾 */
+#messageSelect {
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-family: 'Rounded Mplus 1c', sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  user-select: none;
+}
+
+#messageSelect input[type="radio"] {
+  display: none;
+}
+
+#messageSelect label {
+  display: inline-block;
+  margin: 0.5rem 0.3rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s, color 0.3s;
+  border: 1px solid transparent;
+}
+
+/* 選択状態 */
+#messageSelect input[type="radio"]:checked+label {
+  background-color: #007acc;
+  color: white;
+  border-color: #007acc;
+}
+
+/* ホバー時 */
+#messageSelect label:hover {
+  background-color: #e0f7fa;
+}
+
+/* 見出し部分のスタイル */
+#messageSelect::before {
+  content: "🎙️ メッセージタイプ：";
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  #chipStatus {
+    display: block;
+  }
+
+  #chipStatus p,
+  #betControl {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+
+  /* ↓ ここを修正：横並びに */
+  #betControl {
+    flex-direction: row; /* column → row に */
+    flex-wrap: wrap; /* スマホで折り返し可能に */
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 12px;
+    font-size: 1rem;
+  }
+
+  #betControl label {
+    font-size: 1rem;
+    flex: 1 1 auto; /* 幅を自動調整しつつ、折り返し対応 */
+    min-width: 45%;
+  }
+
+  #betSelect {
+    flex: 1 1 auto;
+    min-width: 45%;
+    margin-top: 0; /* すでに横並びなので余計な margin-top を削除 */
+    padding: 8px 12px;
+    font-size: 1rem;
+    text-align: center;
+  }
+}

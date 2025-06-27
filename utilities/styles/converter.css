@@ -1,0 +1,128 @@
+body {
+  font-family: 'DotGothic16', sans-serif;
+  background-color: #f4f4f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+h1{
+  font-size: 1.5rem;
+}
+
+header {
+  background-color: #e0e0e0;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.5rem;
+}
+
+.layoutWrap {
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+}
+
+.sectionTitle h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#conversionTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#conversionTable th,
+#conversionTable td {
+  padding: 0.6rem;
+  vertical-align: top;
+}
+
+#conversionTable th {
+  text-align: left;
+  font-weight: normal;
+  background-color: #f0f0f5;
+  border-radius: 6px 0 0 6px;
+  width: 30%;
+}
+
+#conversionTable td {
+  width: 70%;
+}
+
+textarea {
+  width: 100%;
+  min-height: 2.4rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: none;
+}
+
+textarea[readonly] {
+  background-color: #eef2f5;
+  color: #444;
+}
+
+select {
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  margin-right: 0.5rem;
+}
+
+#conversionBtn {
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  background-color: #a1d99b;
+  color: #1e5128;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-left: 0.5rem;
+}
+
+#conversionBtn:hover {
+  background-color: #91ce8c;
+}
+
+@media (max-width: 480px) {
+  textarea,
+  select {
+    font-size: 0.9rem;
+  }
+
+  #conversionBtn {
+    font-size: 0.9rem;
+  }
+
+  #conversionTable th,
+  #conversionTable td {
+    display: block;
+    width: 100%;
+  }
+
+  #conversionTable tr {
+    margin-bottom: 1rem;
+    display: block;
+  }
+}

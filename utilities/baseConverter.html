@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/converter.css">
+    <title>基数変換</title>
+  </head>
+  <body>
+    <header>
+      <h1>基数変換</h1>
+    </header>
+    <main>
+      <div class="layoutWrap">
+        <!-- <div class="sectionTitle">
+          <h2>基数変換機</h2>
+        </div> -->
+        <table id="conversionTable">
+          <thead>
+            <tr>
+              <th colspan="2">
+                <select name="baseRadix" id="baseRadixSelect"></select>
+                進数の
+                <textarea name="baseNum" id="baseNum" placeholder="変換したい数字を入力してください"></textarea>
+                を<button id="conversionBtn">変換</button>
+              </th>
+            </tr>
+          </thead>
+          <tbody id="conversionTbody">
+            <tr><th>2進数では</th><td><textarea id="radix2" readonly style="background-color: #eeeeee;"></textarea></td></tr>
+            <tr><th>8進数では</th><td><textarea id="radix8"  readonly style="background-color: #eeeeee;"></textarea></td></tr>
+            <tr><th>10進数では</th><td><textarea id="radix10"  readonly style="background-color: #eeeeee;"></textarea></td></tr>
+            <tr><th>16進数では</th><td><textarea id="radix16"  readonly style="background-color: #eeeeee;"></textarea></td></tr>
+            <tr>
+              <th><select name="toRadix" id="toRadixSelect"></select>進数では</th>
+              <td><textarea id="toRadixTextArea" readonly style="background-color: #eeeeee;"></textarea></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    </div>
+    <footer>
+
+    </footer>
+    <script src="javascript/baseConverter.js"></script>
+  </body>
+
+</html>

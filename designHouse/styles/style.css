@@ -1,0 +1,694 @@
+@charset "utf-8";
+
+.smartView {
+  display: none;
+}
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  color: #333333;
+  width: 1366px;
+  margin: 0 auto;
+  letter-spacing: 0.1em;
+}
+.notoSerifJp {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+}
+/* /////////////////////////////header////////////////////////////////////// */
+header {
+  display: flex;
+  padding: 24px;
+  justify-content: space-between;
+}
+nav {
+  display: flex;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+}
+nav ul li {
+  margin-left: 40px;
+}
+header a:hover {
+  opacity: .5;
+}
+/* /////////////////////////////footer////////////////////////////////////// */
+footer {
+  height: 62px;
+  color: #ffffff;
+  background-color: #333333;
+  text-align: center;
+}
+footer p {
+  padding: 24px 0 24px 0;
+}
+/* /////////////////////////////main////////////////////////////////////// */
+.hero {
+  margin-bottom: 160px;
+  text-align: center;
+}
+section {
+  margin-bottom: 160px;
+}
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.sectionTitle h2{
+  font-size: 42px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.innerWrap {
+  width: 1020px;
+  margin: 0 auto;
+}
+.conceptSubTitle,.serviceSubTitle,.questionSubTitle {
+  position: relative;
+  text-align: center;
+  color: #223E69;
+}
+.conceptSubTitle::before,.serviceSubTitle::before,.questionSubTitle::before{
+  content: url(../images/subTitleLine-223E69.svg);
+  position: relative;
+  bottom: 4px;
+  right: 8px;
+}
+.conceptSubTitle::after,.serviceSubTitle::after,.questionSubTitle::after{
+  content: url(../images/subTitleLine-223E69.svg);
+  position: relative;
+  bottom: 4px;
+  left: 8px;
+}
+.flowSubTitle{
+  position: relative;
+  text-align: center;
+  color: #B71B26;
+}
+.flowSubTitle::before{
+  content: url(../images/subTitleLine-B71B26.svg);
+  position: relative;
+  bottom: 4px;
+  right: 8px;
+}
+.flowSubTitle::after{
+  content: url(../images/subTitleLine-B71B26.svg);
+  position: relative;
+  bottom: 4px;
+  left: 8px;
+}
+.formSubTitle{
+  position: relative;
+  text-align: center;
+  color: #333333
+}
+.formSubTitle::before{
+  content: url(../images/subTitleLine-333333.svg);
+  position: relative;
+  bottom: 4px;
+  right: 8px;
+}
+.formSubTitle::after{
+  content: url(../images/subTitleLine-333333.svg);
+  position: relative;
+  bottom: 4px;
+  left: 8px;
+}
+/* /////////////////////////////conceptSection////////////////////////////////////// */
+.conceptDocument h3{
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.conceptDocument p {
+  line-height: 32px;
+}
+/* /////////////////////////////serviceSection////////////////////////////////////// */
+.serviceDocument ul {
+  display: flex;
+  justify-content: space-between;
+}
+.serviceDocument ul img {
+  width: 300px;
+  height: 210.51px;
+  margin-bottom: 16px;
+}
+.serviceDocument ul li p {
+  width: 300px;
+  margin-bottom: 16px;
+}
+.serviceDocument ul h3 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.moreBtn {
+  display: block;
+  text-align: end;
+}
+.moreBtn::after{
+  content: url(../images/moreArrow.svg);
+  margin-left: 4px;
+}
+/* /////////////////////////////flowSection////////////////////////////////////// */
+.flowSec .innerWrap {
+  background-color: rgba(34, 62, 105,.05);
+  width: 1366px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.flowDocument ol {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 920px;
+}
+.flowText {
+  writing-mode: vertical-rl;
+  width: 60px;
+  height: 280px;
+  color: #ffffff;
+  background-color: #333333;
+  border-radius: 60px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 2;
+  position: relative;
+}
+.stepAllow01::after {
+  content: url(../images/flowStepArrow.svg);
+  opacity: .6;
+  position: absolute;
+  top: 109px;
+  left: 87px;
+}
+.stepAllow02::after {
+  content: url(../images/flowStepArrow.svg);
+  opacity: .7;
+  position: absolute;
+  top: 109px;
+  left: 87px;
+}
+.stepAllow03::after {
+  content: url(../images/flowStepArrow.svg);
+  opacity: .8;
+  position: absolute;
+  top: 109px;
+  left: 87px;
+}
+.stepAllow04::after {
+  content: url(../images/flowStepArrow.svg);
+  opacity: .9;
+  position: absolute;
+  top: 109px;
+  left: 87px;
+}
+.stepAllow05::after {
+  content: url(../images/flowStepArrow.svg);
+  position: absolute;
+  top: 109px;
+  left: 87px;
+}
+/* /////////////////////////////questionSection////////////////////////////////////// */
+.questionDocument {
+  width: 1020px;
+  font-size: 20px;
+}
+.qaText {
+  flex-basis: 960px;
+  line-height: 1.5;
+  align-self: center;
+}
+dt {
+  margin-bottom: 16px;
+}
+dd {
+  margin-bottom: 48px;
+}
+dt,dd{
+  font-weight: normal;
+  display: flex;
+}
+.circleQ {
+  flex-basis: 52px;
+  height: 52px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: #333333;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 34px;
+  color: #ffffff;
+  text-align: center;
+}
+.circleA {
+  flex-basis: 52px;
+  height: 52px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: #B71B26;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 34px;
+  color: #ffffff;
+  text-align: center;
+}
+/* /////////////////////////////formSection////////////////////////////////////// */
+.formSec .innerWrap {
+  background-color: rgba(34, 62, 105,.15);
+  width: 1366px;
+  padding-top: 48px;
+  padding-bottom: 45.72px;
+}
+.formDocument {
+  background-color: rgba(255, 255, 255,.5);
+  width: 1020px;
+  margin: 0 auto;
+}
+.formDocument form{
+ padding-top: 45.36px;
+}
+.formItem {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+.essential {
+  display: inline-block;
+  background-color: #B71B26;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 3px 12px 5px;
+  font-weight: bold;
+  margin-right: 12px;
+}
+input[type="radio"] + span {
+  font-size: 20px;
+}
+.alignment {
+  display: inline-block;
+  width: 329px;
+  text-align: end;
+}
+.inquiryAlign .alignment {
+  position: relative;
+  bottom: 88px;
+}
+input[type="radio"] {
+  width: 24px;
+  height: 24px;
+  vertical-align: text-top;
+  margin-right: 4px;
+}
+.radioText {
+  margin-right: 40px;
+  font-size: 20px;
+}
+.formDocument p{
+  margin-bottom: 24px;
+}
+.formDocument input,
+.formDocument textarea {
+  background-color: #ffffff;
+}
+.customerName,.furigana,.phoneNumber {
+  width: 332px;
+  height: 52px;
+}
+.postMark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+.postCode {
+  width: 222px;
+  height: 52px;
+}
+.address,.emailAddress,.emailAddressCheck {
+  width: 664px;
+  height: 52px;
+}
+.inquiryAlign .essential{
+  visibility: hidden;
+}
+.inquiryText {
+  resize: none;
+  width: 664px;
+  height: 208px;
+}
+
+.submitWrap {
+  margin-top: 48px;
+  padding-bottom: 48px;
+  text-align: center;
+}
+.submitWrap input {
+  background-color: #333333;
+  color: #ffffff;
+  font-weight: bold;
+  font-size:20px;
+  padding: 24px 61px 24px 43px;
+  position: relative;
+  background-image: url(../images/submitArrow.svg);
+  background-repeat: no-repeat;
+  background-position: top 26px right 43.5px;
+}
+input:focus,.inquiryText:focus {
+  border: 1px solid;
+}
+.submitWrap input:hover {
+  opacity: .5;
+}
+.submitWrap input:focus {
+  animation: baloon 1s ease infinite;
+}
+@keyframes baloon {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+/* /////////////////////////////toPageTopSection////////////////////////////////////// */
+.toPageTop {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-left: 1282px;
+  background-color: #333333;
+  background-image: url(../images/toPageTopArrowPcView.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.toPageTop:hover {
+  animation: upDown 1s ease infinite;
+}
+@keyframes upDown {
+  0%   {translate: 0 0;}
+  50%   {translate: 0 -10px;}
+  100%   {translate: 0 0;}
+}
+/* /////////////////////////////////////////RWD対応////////////////////////////////////////////////// */
+@media screen and (max-width: 768px){
+  .pcView {
+    display: none;
+  }
+  .smartView {
+    display: block;
+  }
+  body {
+    width: 375px;
+    font-size: 14px;
+  }
+  header {
+    padding: 16px 12px;
+  }
+  header h1 img{
+    width: 240px;
+    height: 19.71px;
+  }
+  .hamburgerMenu {
+    position: absolute;
+  }
+  .menu {
+    position: absolute;
+    display: block;
+    align-items: center;
+    top: -16px;
+    left: -12px;
+    background-color: rgba(255,255,255,0.9);
+    overflow: hidden;
+    max-height: 0; /* 最初は非表示状態*/
+    transition: max-height .6s;
+  }
+  .menu li {
+    margin-left: 0px;
+    text-align: center;
+  }
+  .menu li:first-of-type {
+    margin-top: 80px;
+  }
+  .menu li:last-of-type {
+    margin-bottom: 180px;
+  }
+  .menu li a {
+    display: block;
+    width: 375px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 48px;
+  }
+  .menuBtn {
+    display: none;
+  }
+  .menuBtn,.menuIcon {
+    position: absolute;
+    left: 320px;
+    z-index: 100;
+  }
+  .naviCon {
+    content: url(../images/hamburger.svg);
+  }
+  .menuBtn:checked ~ .menu {
+    max-height: 532px;
+    transition: max-height .6s;
+  }
+  .menuBtn:checked ~ .menuIcon .naviCon {
+    content: "";
+  }
+  .menuBtn:checked ~ .menuIcon .naviCon::before {
+    content: url(../images/hamburgerMenuLineRightUp.svg);
+  }
+  .menuBtn:checked ~ .menuIcon .naviCon::after {
+    content: url(../images/hamburgerMenuLineLeftUp.svg);
+    position: relative;
+    bottom: 23px;
+  }
+  /* /////////////////////////////////////////RWDmain////////////////////////////////////////////////// */
+  .hero img {
+    width: 375px;
+    height: 480px;
+  }
+  .hero {
+    margin-bottom: 48px;
+  }
+  section {
+    margin-bottom: 80px;
+  }
+  .sectionTitle {
+    margin-bottom: 24px;
+  }
+  .sectionTitle h2 {
+    font-size: 28px;
+    margin-bottom: 8.11px;
+  }
+  .sectionTitle p {
+    font-size: 12px;
+  }
+  .innerWrap {
+    width: 351px;
+  }
+  /* /////////////////////////////////////////RWDconcept////////////////////////////////////////////////// */
+  .conceptDocument h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  /* /////////////////////////////////////////RWDservice////////////////////////////////////////////////// */
+  .serviceDocument ul {
+    flex-direction: column;
+    height: 1182.87px;
+  }
+  .serviceDocument ul img {
+    width: 351px;
+    height: 246.29px;
+    margin-bottom: 8px;
+  }
+  .serviceDocument ul h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .serviceDocument ul li p {
+    width: 351px;
+    margin-bottom: 8px;
+  }
+  /* /////////////////////////////////////////RWDflow////////////////////////////////////////////////// */
+  .flowSec .innerWrap {
+    width: 375px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .flowDocument ol {
+    margin: 0 auto;
+    display: block;
+    width: 375px;
+  }
+  .flowText {
+    writing-mode: horizontal-tb;
+    width: 300px;
+    height: 32px;
+    margin: 0 auto 32px;
+    color: #ffffff;
+    background-color: #333333;
+    border-radius: 60px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 2;
+  }
+  .stepAllow01::after {
+    content: url(../images/flowStepArrowUnder.svg);
+    opacity: .6;
+    position: absolute;
+    left: 134px;
+    top: 32px;
+  }
+  .stepAllow02::after {
+    content: url(../images/flowStepArrowUnder.svg);
+    opacity: .7;
+    position: absolute;
+    left: 134px;
+    top: 32px;
+  }
+  .stepAllow03::after {
+    content: url(../images/flowStepArrowUnder.svg);
+    opacity: .8;
+    position: absolute;
+    left: 134px;
+    top: 32px;
+  }
+  .stepAllow04::after {
+    content: url(../images/flowStepArrowUnder.svg);
+    opacity: .9;
+    position: absolute;
+    left: 134px;
+    top: 32px;
+  }
+  .stepAllow05::after {
+    content: url(../images/flowStepArrowUnder.svg);
+    opacity: 1;
+    position: absolute;
+    left: 134px;
+    top: 32px;
+  }
+  /* /////////////////////////////////////////RWDQ&A////////////////////////////////////////////////// */
+  .questionDocument {
+    width: 351px;
+    font-size: 16px;
+  }
+  .circleQ {
+    display: block;
+    flex-basis: 36px;
+    height: 36px;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .circleA {
+    display: block;
+    flex-basis: 36px;
+    height: 36px;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .qaText {
+    flex-basis: 315px;
+    line-height: 1.5;
+    align-self: center;
+  }
+  /* /////////////////////////////////////////RWDform////////////////////////////////////////////////// */
+  .formSec .innerWrap {
+    width: 375px;
+    padding-top: 16px;
+    padding-bottom: 1px;
+  }
+  .formDocument {
+    width: 375px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0);
+    width: 357px;
+    margin: 0 auto;
+  }
+  .formDocument form {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .alignment {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .formItem {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 4px;
+    margin-bottom: 8px;
+  }
+  .essential {
+    display: inline-block;
+    padding: 4px 9.5px;
+    margin-right: 0px;
+    font-size: 10px;
+  }
+  .radioTextAlign {
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+  }
+  input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-top;
+    margin-right: 4px;
+  }
+  .radioText {
+    margin-right: 40px;
+    font-size: 14px;
+  }
+  .customerName, .furigana, .phoneNumber {
+    width: 351px;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+  }
+  .postCode {
+    width: 125px;
+    height: 30px;
+    margin-bottom: 8px;
+  }
+  .postCodeAdress {
+    display: inline;
+  }
+  .address, .emailAddress, .emailAddressCheck {
+    width: 351px;
+    height: 30px;
+  }
+  .inquiryAlign .alignment {
+    position: static;
+  }
+  .inquiryText {
+    width: 351px;
+    height: 120px;
+  }
+  .inquiryAlign .essential {
+    display: none;
+  }
+  .submitWrap {
+    margin-top: 24px;
+    padding-bottom: 16px;
+}
+  /* /////////////////////////////////////////RWDtoPageTop////////////////////////////////////////////////// */
+  .toPageTop {
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin-left: 317px;
+    background-image: url(../images/toPageTopArrowSmartView.svg);
+  }
+}

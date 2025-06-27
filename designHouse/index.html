@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="common/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Design House Renovations</title>
+  </head>
+  <body>
+    <header class="notoSerifJp" id="pageTop">
+      <h1>
+        <img src="images/DesignHouseRenovationsLogo.svg" alt="DesignHouseRenovationsロゴ">
+      </h1>
+      <nav class="pcView">
+        <ul>
+          <li><a href="#conceptArea">コンセプト</a></li>
+          <li><a href="#serviceArea">サービス</a></li>
+          <li><a href="#flowArea">施工の流れ</a></li>
+          <li><a href="#questionArea">よくあるご質問</a></li>
+          <li><a href="#formArea">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <nav class="hamburgerMenu smartView">
+        <input class="menuBtn" type="checkbox" id="menuBtn">
+        <label class="menuIcon" for="menuBtn">
+          <span class="naviCon"></span>
+        </label>
+        <ul class="menu">
+          <li><a href="#conceptArea">コンセプト</a></li>
+          <li><a href="#serviceArea">サービス</a></li>
+          <li><a href="#flowArea">施工の流れ</a></li>
+          <li><a href="#questionArea">よくあるご質問</a></li>
+          <li><a href="#formArea">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="hero">
+        <picture>
+          <!-- PC用画像 -->
+          <source srcset="images/heroPcView.png" media="(min-width: 769px)">
+          <!-- スマホ用画像 -->
+          <source srcset="images/heroSmartView.png" media="(max-width: 768px)">
+          <!-- フォールバック(通常のimg)-->
+          <img src="images/heroSmartView.png" alt="ダイニングテーブルの画像">
+        </picture>
+      </div>
+      <section class="conceptSec" id="conceptArea">
+        <div class="innerWrap">
+          <div class="sectionTitle notoSerifJp">
+            <h2>concept</h2>
+            <p class="conceptSubTitle">コンセプト</p>
+          </div>
+          <div class="conceptDocument">
+            <h3>家族が笑顔になれる場所</h3>
+            <p>
+              家族が集う、温かく居心地の良い空間づくりを目指して、
+              幅広い年代の方に安心して過ごしていただける空間づくりや、
+              お手入れのしやすい素材を使用したリフォームをご提案いたします。
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="serviceSec" id="serviceArea">
+        <div class="innerWrap">
+          <div class="sectionTitle notoSerifJp">
+            <h2>service</h2>
+            <p class="serviceSubTitle">サービス</p>
+          </div>
+          <div class="serviceDocument">
+            <ul>
+              <li>
+                <article>
+                  <img src="images/bathRoomPhoto.png" alt="浴室の写真">
+                  <h3 class="notoSerifJp">浴室</h3>
+                  <p>ご家族が一緒に入れる広めの浴槽や手すり等、安全性に配慮しています。</p>
+                  <a href="#" class="moreBtn">more</a>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <img src="images/livingRoomPhoto.png" alt="リビングの写真">
+                  <h3 class="notoSerifJp">リビング</h3>
+                  <p>照明や家具の配置等、くつろぎやすい空間づくりを大切にしています。</p>
+                  <a href="#" class="moreBtn">more</a>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <img src="images/kitchenPhoto.png" alt="キッチンの写真">
+                  <h3 class="notoSerifJp">キッチン</h3>
+                  <p>機能性だけでなく、デザイン性にもこだわっております。</p>
+                  <a href="#" class="moreBtn">more</a>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="flowSec" id="flowArea">
+        <div class="innerWrap">
+          <div class="sectionTitle notoSerifJp">
+            <h2>flow</h2>
+            <p class="flowSubTitle">施工の流れ</p>
+          </div>
+          <div class="flowDocument">
+            <ol>
+              <li class="flowText stepAllow01">ご相談</li>
+              <li class="flowText stepAllow02">現地調査</li>
+              <li class="flowText stepAllow03">お見積り</li>
+              <li class="flowText stepAllow04">ご契約</li>
+              <li class="flowText stepAllow05">施工</li>
+              <li class="flowText">お引き渡し</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section class="questionSec" id="questionArea">
+        <div class="innerWrap">
+          <div class="sectionTitle notoSerifJp">
+            <h2>Q&A</h2>
+            <p class="questionSubTitle">よくあるご質問</p>
+          </div>
+          <div class="questionDocument">
+            <dl class="qaList">
+              <dt>
+                <span class="circleQ notoSerifJp">Q.</span><span class="qaText">見積りは無料ですか？</span>
+              </dt>
+              <dd>
+                <span class="circleA notoSerifJp">A.</span>
+                <span class="qaText">はい。お見積りは無料で承っております。ホームページよりお気軽にお問い合わせください。</span>
+              </dd>
+              <dt>
+                <span class="circleQ notoSerifJp">Q.</span><span class="qaText">普段通り生活をしながらのリフォーム工事は可能ですか？</span>
+              </dt>
+              <dd>
+                <span class="circleA notoSerifJp">A.</span>
+                <span class="qaText">はい。もちろん可能です。工事中の箇所は、何日間か使用できなくなる場合もございますのであらかじめご了承ください。
+                大型リフォームの場合には、仮住まいもお薦めしております。</span>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+      <section class="formSec" id="formArea">
+        <div class="innerWrap">
+          <div class="sectionTitle notoSerifJp">
+            <h2>contact</h2>
+            <p class="formSubTitle">お問い合わせ</p>
+          </div>
+          <div class="formDocument">
+            <form action="" method="">
+              <p>
+                <span class="alignment">
+                  <span class="formItem">お問い合わせ種別</span>
+                  <span class="essential">必須</span>
+                </span>
+                <span class="radioTextAlign">
+                  <label>
+                    <input type="radio" name="requestType" value="資料請求" required>
+                    <span class="radioText">資料請求</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="requestType" value="ご相談">
+                    <span class="radioText">ご相談</span>
+                  </label>
+                </span>
+              </p>
+              <p>
+              <span class="alignment">
+                <label for="customerNameInput" class="formItem">お名前</label>
+                <span class="essential">必須</span>
+              </span>
+              <input class="customerName" type="text" name="customerName" id="customerNameInput" placeholder="例:山田 太郎" required >
+              </p>           
+              <p>
+                <span class="alignment">
+                  <label for="furiganaInput" class="formItem">フリガナ</label>
+                  <span class="essential">必須</span>
+                </span>
+                <input class="furigana" type="text" name="furigana" id="furiganaInput" placeholder="例:ヤマダ タロウ" required>
+              </p>
+              <p>
+                <span class="alignment">
+                  <label for="phoneInput" class="formItem">電話番号</label>
+                  <span class="essential">必須</span>
+                </span>
+                <input class="phoneNumber" type="tel" name="phoneNumber" id="phoneInput" pattern="[0-9\-]+" 
+                inputmode="tel" placeholder="例:090-1234-5678" required>
+              </p>
+              <p class="postCodeAdress">
+                <span class="alignment">
+                  <label for="postCodeInput" class="formItem">住所</label>
+                  <span class="essential">必須</span>
+                </span>
+                <span class="postMark">〒</span>
+                <input class="postCode" type="text" name="postCode" inputmode="numeric" pattern="\d{3}-?\d{4}" 
+                id="postCodeInput" placeholder="例:123-4567" required>
+              </p>
+              <p>
+                <span class="alignment"></span>
+                <input class="address" type="text" name="address" placeholder="例:千葉県千葉市中央区市場町1番1号" required>
+              </p>
+              <p>
+                <span class="alignment">
+                  <label for="emailAddressInput" class="formItem">メールアドレス</label>
+                  <span class="essential">必須</span>
+                </span>
+                <input class="emailAddress" type="email" name="emailAddress" 
+                id="emailAddressInput" placeholder="例:your@example.com" required>
+              </p>
+              <p>
+                <span class="alignment">
+                  <label for="emailAddressCheckInput" class="formItem">メールアドレス(確認用)</label>
+                  <span class="essential">必須</span>
+                </span>
+                <input class="emailAddressCheck" type="email" name="emailAddressCheck" 
+                id="emailAddressCheckInput" placeholder="例:your@example.com" autocomplete="off" required>
+              </p>
+              <p class="inquiryAlign">
+                <span class="alignment">
+                  <label for="inquiryTextInput" class="formItem">お問い合わせ内容</label>
+                  <span class="essential">必須</span>
+                </span>
+                <textarea class="inquiryText" name="inquiryText" id="inquiryTextInput" placeholder="5000文字まで" 
+                maxlength="5000" required></textarea>
+              </p>
+              <div class="submitWrap">
+                <input class="notoSerifJp" type="submit" value="入力内容を確認する">
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <a href="#pageTop" class="toPageTop" ></a>
+    </main>
+    <footer class="notoSerifJp">
+      <p>&copy;2023 Design House Renovations</p>
+    </footer>
+  </body>
+</html>
